@@ -1,8 +1,6 @@
-const GITHUB_TOKEN = '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'; // 替换为你的 GitHub Token
-const REPO_OWNER = 'KehaoHuang24';
-const REPO_NAME = 'ChemicalList';
-const FILE_PATH = 'chemicals.json';
-const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
+      const token = "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"; // 替换为你的 GitHub Token
+      const repo = "KehaoHuang24/ChemicalList"; // 替换为你的 GitHub 仓库路径
+      const filePath = "chemicals.json";
 
 let chemicals = [];
 
