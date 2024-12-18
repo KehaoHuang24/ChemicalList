@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Wang's Lab Chemical Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        label, input, select, button {
+            margin: 5px;
+        }
+        input, select {
+            padding: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        #addChemicalBtn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        #addChemicalBtn:hover {
+            background-color: darkred;
+        }
+        #chemicalTypeButtons {
+            margin: 10px 0;
+            text-align: center;
+        }
+        #chemicalTypeButtons button {
+            margin: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            background-color: lightgray;
+        }
+        #chemicalTypeButtons button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dr. Wang's Lab Chemical Management System</h1>
+    <div class="container">
+        <!-- Input Fields -->
+        <div>
+            <label for="chemicalName">Chemical Name:</label>
+            <input type="text" id="chemicalName" placeholder="Enter chemical name">
+            
+            <label for="purity">Purity:</label>
+            <input type="text" id="purity" placeholder="Enter purity">
+            
+            <label for="size">Size:</label>
+            <input type="text" id="size" placeholder="Enter size">
+            
+            <label for="quantity">Quantity:</label>
+            <input type="text" id="quantity" placeholder="Enter quantity">
+            
+            <label for="chemicalType">Type:</label>
+            <select id="chemicalType">
+                <option value="solid">Solid</option>
+                <option value="liquid">Liquid</option>
+                <option value="fridge">Fridge</option>
+            </select>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+            
+            <label for="recordedBy">Recorded By:</label>
+            <input type="text" id="recordedBy" placeholder="Enter name">
+            
+            <button id="addChemicalBtn">Add Chemical</button>
+        </div>
+
+        <!-- Type Filter Buttons -->
+        <div id="chemicalTypeButtons">
+            <button onclick="filterByType('solid')" id="btnSolid">Solid</button>
+            <button onclick="filterByType('liquid')" id="btnLiquid">Liquid</button>
+            <button onclick="filterByType('fridge')" id="btnFridge">Fridge</button>
+        </div>
+
+        <!-- Chemical Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Chemical Name</th>
+                    <th>Purity</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Recorded By</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="chemicalTableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
