@@ -1,4 +1,4 @@
-const GITHUB_TOKEN = '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'; // 替换为你的 GitHub Token
+const GITHUB_TOKEN = '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'; // 替换为你的 GitHub Token
 const REPO_OWNER = 'KehaoHuang24';
 const REPO_NAME = 'ChemicalList';
 const FILE_PATH = 'chemicals.json';
